@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+
+    <body style="text-align: center; background-image: linear-gradient(blue, cyan, white);">
+        <div>    
+            <span><img src="Taruc Family Logo.png" style="width: 200px;"></span>
+            <span><h1 style="font-size: 50px;" >My Family Book</h1></span>
+        </div>
+       
+        <img src="Taruc Family.png" style="width: 500px;" id="family_member_image">
+        
+        <h1 id="family_member_name">Taruc Family</h1>
+
+        <button onclick="update();">Next</button>
+    
+    </body>
+
+<script>
+    var images = ["Taruc Family.png", "CET.png", "FT.jpg", "LTT.jpg", "JT.jpg", "LET.jpg", "Gab.png"];
+    var names = ["Taruc Family", "Celso E. Taruc - Grandfather of Taruc Family", "Felisa T. Taruc - Grandmother of Taruc Family", "Luis T. Taruc - Father of Taruc Family", "Jhec C. Taruc - Mother of Taruc Family", "Luis Ezekiel C. Taruc - Oldest Son of the Taruc Family", "Louise Gabrielle C. Taruc - Youngest Daughter of Taruc Family"];
+    var i = 0;
+
+function update() {
+    i++;
+    var numbers_of_family_member_in_array = 7;
+
+    if(i > numbers_of_family_member_in_array) {
+        i = 0;
+    }
+
+    var updatedImage = images[i];
+    var updatedName = names[i];
+    document.getElementById("family_member_image").src = updatedImage;
+    document.getElementById("family_member_name").innerHTML = updatedName;
+}
+
+
+</script>
+
+</html>
